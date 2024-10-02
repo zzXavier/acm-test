@@ -1,0 +1,28 @@
+{
+  "name": "acm-test",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/starlight": "^0.25.1",
+    "@astrojs/starlight-tailwind": "^2.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.12.2",
+    "rollup": "4.18.0",
+    "sharp": "^0.32.5",
+    "vite-plugin-pwa": ">=0.20.0 <1",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "@vite-pwa/astro": "^0.4.0",
+    "workbox-window": "^7.1.0"
+  }
+}
