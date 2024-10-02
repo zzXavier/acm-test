@@ -21,6 +21,7 @@ int main()
         }
         yushu[number[i] % 200]++;
         
+        
     }
     for(int i = 0;i<200;i++)
     {
