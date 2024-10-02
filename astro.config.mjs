@@ -51,7 +51,7 @@ export default defineConfig({
 		sidebar: [{
 			label: 'ZZX',
 			autogenerate: {
-				directory: 'acm'
+				directory: 'zzx'
 			}
 		}, {
 			label: 'Guides',
