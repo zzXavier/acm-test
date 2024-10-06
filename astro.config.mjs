@@ -48,27 +48,24 @@ export default defineConfig({
 				}
 			},
 		],
-		sidebar: [{
-			label: 'ZZX',
-			autogenerate: {
-				directory: 'zzx'
-			}
-		}, {
-			label: 'Guides',
-			collapsed: true,
-			items: [
-				// Each item here is one entry in the navigation menu.
+		sidebar: [
+			{
+				label: 'Guides',
+				collapsed: true,
+				items: [
+					// Each item here is one entry in the navigation menu.
+					{
+						label: 'Example Guide',
+						slug: 'guides/example'
+					}]
+				}, 
 				{
-					label: 'Example Guide',
-					slug: 'guides/example'
-				}]
-		}, {
-			label: 'Reference',
-			collapsed: true,
-			autogenerate: {
-				directory: 'reference'
-			}
-		}],
+					label: 'ZZX',
+					autogenerate: {
+						directory: 'zzx'
+					}
+				} 
+		],
 		customCss: ['./src/tailwind.css']
 	}), tailwind({
 		applyBaseStyles: false
