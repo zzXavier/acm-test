@@ -2,13 +2,19 @@
 title: uses
 ---
 
-vscode  
-cs50 lectures  
+vscode/gitee/github/ename/cloudflare/astro(starlight)
+
+https://kimi.ai  
+https://chatgpt.com/
+
+[cs50 lectures](https://github.com/cs50/lectures)  
 ACM  
-csdiy.wiki
+https://csdiy.wiki
 
 TODO:
 
-- [ ] docker
-- [ ] vscode in c50
-- [ ] c50 cli
+<!-- 
+
+- [ ] cs50 cli (https://cs50.readthedocs.io/cli50/)
+
+-- >
