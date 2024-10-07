@@ -47,14 +47,14 @@ export default defineConfig({
 		sidebar: [
 			{
 				label: 'Guides',
-				collapsed: true,
+				collapsed: false,
 				autogenerate: {
 					directory: 'guides'
 				}
 			},
 			{
 				label: 'ZZX',
-				collapsed: true,
+				collapsed: false,
 				autogenerate: {
 					directory: 'zzx'
 				}
