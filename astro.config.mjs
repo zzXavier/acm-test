@@ -51,13 +51,14 @@ export default defineConfig({
 				autogenerate: {
 					directory: 'guides'
 				}
-				}, 
-				{
-					label: 'ZZX',
-					autogenerate: {
-						directory: 'zzx'
-					}
-				} 
+			},
+			{
+				label: 'ZZX',
+				collapsed: true,
+				autogenerate: {
+					directory: 'zzx'
+				}
+			}
 		],
 		customCss: ['./src/tailwind.css']
 	}), tailwind({
