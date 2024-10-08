@@ -3,7 +3,7 @@ title: Problem set 1
 ---
 
 
-# mario
+## mario
 
 主要考验了对循环的理解和语法的规范
 ```c
@@ -58,7 +58,7 @@ void print_space(int length)
 ```
 
 
-# credit
+## credit
 
 新用到一个sprintf函数用来转换数据类型
 ```c
