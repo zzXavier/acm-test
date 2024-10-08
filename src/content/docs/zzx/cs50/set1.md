@@ -5,7 +5,7 @@ title: Problem set 1
 
 ## mario
 
-主要考验了对循环的理解和语法的规范
+- 主要考验了对循环的理解和语法的规范
 ```c
 #include<stdio.h>
 #include<cs50.h>
@@ -60,7 +60,7 @@ void print_space(int length)
 
 ## credit
 
-新用到一个sprintf函数用来转换数据类型
+- 新用到一个sprintf函数用来转换数据类型
 ```c
 #include <stdio.h>
 #include <cs50.h>
