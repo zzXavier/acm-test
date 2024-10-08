@@ -166,3 +166,55 @@ int cal_sum(string l,size_t s,int k[])
     return sum;
 }
 ```
+## Readability
+- 新用到了<ctype.h>的函数，可以用来判断字母、数字、标点符号，甚至是空格。  
+还新用到了<math.h>中的round函数，用来四舍五入
+```c
+#include <stdio.h>
+#include <cs50.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+int main()
+{
+    string sentence = get_string("text:");
+    //输入一段句子
+    size_t length = strlen(sentence);
+    int sum_alpha = 0;
+    int sum_words = 1;
+    int sum_sentence = 0;
+    for(int i=0;i<length;i++)
+    {
+        if(isalpha(sentence[i]))
+        {
+            sum_alpha++;
+        }
+        else if(isspace(sentence[i]))
+        {
+            sum_words++;
+        }
+        else if(sentence[i] == '!' || sentence[i] == '?' || sentence[i] == '.')
+        {
+            sum_sentence++;
+        }
+    }
+    //字母数量，词语数量（找空格数量）
+    float index = (5.88*sum_alpha)/sum_words - (29.6*sum_sentence)/sum_words - 15.8;
+    int index1 = round(index);
+    //计算
+    if(index1 < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if(index1 >=16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Grade %i\n",index1);
+    }
+    //根据条件设置打印情况
+}
+```
