@@ -19,9 +19,20 @@ for(int j=0 ;j<4;j++ )
     //to do
 }
 ```
-- 条件语句的三种写法
+- 条件语句的三种写法  
 1.if（else）语句  
 2.switch语句（要加break）  
+```c
+switch (<selector expression>) {
+case <value_1>: <action_1>;
+break;
+case <value_2>: <action_2>;
+break;
+case <value_3>: <action_3>
+break;
+default: <action_4>;
+}
+```
 3.？：常用来做一些简单的判断
 eg.
 ```c
