@@ -3,6 +3,7 @@ title: eap essay
 ---
 
 ## Transitioning from High School to University: Key Factors for a Successful Adjustment
+
 ## Introduction
 A smooth transition from high school to university is crucial for students. While university presents both challenges and opportunities, how can students effectively navigate this new environment and adapt successfully? This essay will explore two key factors that can enhance students’ transitions: managing expectations and building social relationships. By focusing on these pivotal elements, students can experience improved behaviors and achieve a more successful and less stressful adjustment to university life.
 
