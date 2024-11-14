@@ -51,18 +51,10 @@ else
 int x = (expr)?5:6;
 ```
 ## 归并排序
-用到了递归的算法  
+用到了递归的算法,每个mergesort中都有两个merge sort函数和一个merge函数，当分组到了最终结果后，返回时会进行之前在每个merge sort中存的merge算法，进行排序，从而实现了归并排序  
 ```c
 #include <stdio.h>
 #include <stdlib.h>
-
-// 合并两个子数组的函数
-// firstHalf 是指向第一个子数组的指针
-// secondHalf 是指向第二个子数组的指针
-// lowerBound 是第一个子数组的起始索引
-// middle 是两个子数组的分界索引
-// upperBound 是第二个子数组的结束索引
-// arr 是原始数组
 void merge(int arr[], int lowerBound, int middle, int upperBound) {
     int i, j, k;
     int n1 = middle - lowerBound + 1;
