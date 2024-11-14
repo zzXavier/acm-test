@@ -123,3 +123,17 @@ void mergeSort(int arr[], int l, int r) {
     }
 }
 ```
+## 结构体
+结构体的写法
+```c
+typeof struct{
+    string name;
+    string number;//数据类型+变量名；
+}People;//新建类型的名称
+
+People person;
+person.name=Xavier;
+person.number=1105;
+```
+结构体里的变量名可以与结构体之外的变量名重名（作用域不同）  
+但通常不要这么写，因为容易造成混淆...
