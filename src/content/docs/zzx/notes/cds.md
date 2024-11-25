@@ -118,7 +118,7 @@ void mergeSort(int arr[], int l, int r) {
 ## 结构体
 结构体的写法
 ```c
-typeof struct{
+typedef struct{
     string name;
     string number;//数据类型+变量名；
 }People;//新建类型的名称
