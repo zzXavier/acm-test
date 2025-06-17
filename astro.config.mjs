@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
@@ -10,12 +10,13 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
+  
+	image: { 
+    service: passthroughImageService(),
+    domains: ["images.unsplash.com"],
+   },
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://051105.cn",
-
-  image: {
-    domains: ["images.unsplash.com"],
-  },
 
   // i18n: {
   //   defaultLocale: "en",
@@ -130,6 +131,16 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    logLevel: 'info',
+		define: {
+			__DATE__: `'${new Date().toISOString()}'`
+		},
+		server: {
+			fs: {
+				// Allow serving files from hoisted root node_modules
+				allow: ['../..']
+			}
+		}
   },
 
   adapter: cloudflare(),
