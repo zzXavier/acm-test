@@ -8,10 +8,12 @@ import mdx from "@astrojs/mdx";
 
 import cloudflare from "@astrojs/cloudflare";
 
+import decapCmsOauth from "astro-decap-cms-oauth";
+
 // https://astro.build/config
 export default defineConfig({
   
-	image: { 
+    image: { 
     service: passthroughImageService(),
     domains: ["images.unsplash.com"],
    },
@@ -123,7 +125,13 @@ export default defineConfig({
   }), compressor({
     gzip: false,
     brotli: true,
-  }), mdx()],
+  }), mdx(), decapCmsOauth({
+    adminRoute: "/admin",
+    oauthDisabled: false,
+    oauthLoginRoute: "/api/auth",
+    oauthCallbackRoute: "/api/callback",
+  }),
+],
 
   experimental: {
     clientPrerender: true,
@@ -132,15 +140,15 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     logLevel: 'info',
-		define: {
-			__DATE__: `'${new Date().toISOString()}'`
-		},
-		server: {
-			fs: {
-				// Allow serving files from hoisted root node_modules
-				allow: ['../..']
-			}
-		}
+        define: {
+            __DATE__: `'${new Date().toISOString()}'`
+        },
+        server: {
+            fs: {
+                // Allow serving files from hoisted root node_modules
+                allow: ['../..']
+            }
+        }
   },
 
   adapter: cloudflare(),

@@ -29,6 +29,9 @@ dependencies:
   astro-compressor:
     specifier: ^1.0.0
     version: 1.0.0
+  astro-decap-cms-oauth:
+    specifier: ^0.5.1
+    version: 0.5.1(astro@5.9.3)
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
@@ -2812,6 +2815,14 @@ packages:
 
   /astro-compressor@1.0.0:
     resolution: {integrity: sha512-MNGRmjIsb73BIJivbU/HnTbPu5CEFvXp1NCev0bpsuK/cp4cCPX6C1omUPXzw2oQbtKv0phTTTtEk+h20SrF1Q==}
+    dev: false
+
+  /astro-decap-cms-oauth@0.5.1(astro@5.9.3):
+    resolution: {integrity: sha512-dxIfwj+E5XuUCGhbTWVA0XRLK0qXDKvflC0Jy4n0H219RpGXcHCQ3lmwE8aNO2/R16dSRJ//xoBjkuqSpYK5CQ==}
+    peerDependencies:
+      astro: ^5.0.0
+    dependencies:
+      astro: 5.9.3(typescript@5.8.3)
     dev: false
 
   /astro-expressive-code@0.41.2(astro@5.9.3):
