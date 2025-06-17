@@ -6,13 +6,17 @@ import starlight from "@astrojs/starlight";
 
 import mdx from "@astrojs/mdx";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://051105.cn",
+
   image: {
     domains: ["images.unsplash.com"],
   },
+
   // i18n: {
   //   defaultLocale: "en",
   //   locales: ["en", "fr"],
@@ -24,6 +28,7 @@ export default defineConfig({
   //   },
   // },
   prefetch: true,
+
   integrations: [sitemap({
     i18n: {
       defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
@@ -118,10 +123,14 @@ export default defineConfig({
     gzip: false,
     brotli: true,
   }), mdx()],
+
   experimental: {
     clientPrerender: true,
   },
+
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare(),
 });
