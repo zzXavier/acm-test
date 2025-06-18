@@ -2,7 +2,6 @@
 dist/
 # generated types
 .astro/
-.idea/
 
 # dependencies
 node_modules/
@@ -20,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+.vscode
+
+src/content/posts/test-markdown.md

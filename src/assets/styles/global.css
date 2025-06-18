@@ -2,6 +2,8 @@
 @import 'preline/variants.css';
 @plugin '@tailwindcss/forms';
 
+@config "../../../tailwind.config.js";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

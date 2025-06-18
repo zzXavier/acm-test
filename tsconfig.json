@@ -1,18 +1,25 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@content/*": ["src/content/*"],
-      "@data/*": ["src/data_files/*"],
-      "@images/*": ["src/images/*"],
-      "@scripts/*": ["src/assets/scripts/*"],
-      "@styles/*": ["src/assets/styles/*"],
-      "@utils/*": ["src/utils/*"]
+    "extends": "astro/tsconfigs/strict",
+    "include": [".astro/types.d.ts", "**/*"],
+    "exclude": ["dist"],
+    "compilerOptions": {
+        "strictNullChecks": true,
+        "baseUrl": "src",
+        "jsx": "react-jsx",
+        "types": ["astro/client"],
+        "paths": {
+            "@/*": ["*"],
+            "@src/*": ["src/*"],
+            "@components/*": ["components/*"],
+            "@content/*": ["content/*"],
+            "@layouts/*": ["layouts/*"],
+            "@scripts/*": ["assets/scripts/*"],
+            "@styles/*": ["assets/styles/*"],
+            "@pages/*": ["pages/*"],
+            "@support/*": ["support/*"],
+            "@images/*": [
+                "images/*"
+            ]
+        }
     }
-  },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
 }
