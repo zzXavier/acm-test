@@ -13,29 +13,37 @@ import starlight from '@astrojs/starlight';
 
 import cloudflare from '@astrojs/cloudflare';
 
-import path from 'node:path';
-import url from 'node:url'
+import decapCmsOauth from "astro-decap-cms-oauth";
 
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+// import path from 'node:path';
+// import url from 'node:url'
 
-const alias = {
-    '@src': path.resolve(__dirname, './src'),
-    "@components": path.resolve(__dirname, './src/components'),
-    '@content': path.resolve(__dirname, './src/content'),
-    '@layouts': path.resolve(__dirname, './src/layouts'),
-    '@scripts': path.resolve(__dirname, './src/assets/scripts/'),
-    '@styles': path.resolve(__dirname, './src/assets/styles'),
-    "@pages": path.resolve(__dirname, './src/pages'),
-    '@support': path.resolve(__dirname, './src/support'),
-    '@images': path.resolve(__dirname, './src/images'),
-    'react-dom/server': 'react-dom/server.edge',
-  }
+// const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+
+// const alias = {
+//     '@src': path.resolve(__dirname, './src'),
+//     "@components": path.resolve(__dirname, './src/components'),
+//     '@content': path.resolve(__dirname, './src/content'),
+//     '@layouts': path.resolve(__dirname, './src/layouts'),
+//     '@scripts': path.resolve(__dirname, './src/assets/scripts/'),
+//     '@styles': path.resolve(__dirname, './src/assets/styles'),
+//     "@pages": path.resolve(__dirname, './src/pages'),
+//     '@support': path.resolve(__dirname, './src/support'),
+//     '@images': path.resolve(__dirname, './src/images'),
+//     'react-dom/server': 'react-dom/server.edge',
+//   }
+
+// resolve: {
+//   alias
+// },
 
 export default defineConfig({
   
   vite: {
     resolve: {
-      alias
+      alias: import.meta.env.PROD && {
+        "react-dom/server": "react-dom/server.edge",
+      },
     },
     plugins: [
       tailwindcss({
@@ -165,6 +173,7 @@ export default defineConfig({
   },
 
   integrations: [
+      decapCmsOauth(),
       partytown(),
       sitemap(),
       
