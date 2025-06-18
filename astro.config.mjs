@@ -27,7 +27,8 @@ const alias = {
     '@styles': path.resolve(__dirname, './src/assets/styles'),
     "@pages": path.resolve(__dirname, './src/pages'),
     '@support': path.resolve(__dirname, './src/support'),
-    '@images': path.resolve(__dirname, './src/images')
+    '@images': path.resolve(__dirname, './src/images'),
+    'react-dom/server': 'react-dom/server.edge',
   }
 
 export default defineConfig({
