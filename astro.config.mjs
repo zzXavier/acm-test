@@ -13,9 +13,30 @@ import starlight from '@astrojs/starlight';
 
 import cloudflare from '@astrojs/cloudflare';
 
+import path from 'node:path';
+import url from 'node:url'
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+
+const alias = {
+    '@main': path.resolve(__dirname, 'src/main'),
+    '@src': path.resolve(__dirname, 'src'),
+    "@components": path.resolve(__dirname, 'src/components'),
+    '@content': path.resolve(__dirname, 'src/content'),
+    '@layouts': path.resolve(__dirname, 'src/layouts'),
+    '@scripts': path.resolve(__dirname, 'src/assets/scripts/'),
+    '@styles': path.resolve(__dirname, 'src/assets/styles'),
+    "@pages": path.resolve(__dirname, 'src/pages'),
+    '@support': path.resolve(__dirname, 'src/support'),
+    '@images': path.resolve(__dirname, 'src/images')
+  }
+
 export default defineConfig({
   
   vite: {
+    resolve: {
+      alias
+    },
     plugins: [
       tailwindcss({
           content: [

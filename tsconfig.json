@@ -17,9 +17,7 @@
             "@styles/*": ["assets/styles/*"],
             "@pages/*": ["pages/*"],
             "@support/*": ["support/*"],
-            "@images/*": [
-                "images/*"
-            ]
+            "@images/*": ["images/*"],
         }
     }
 }
