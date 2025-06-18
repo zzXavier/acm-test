@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import Icon from '@components/ui/icons/icon.astro'
+// import Icon from '@components/ui/icons/icon.astro'
 import Image from '@components/ui/images/Image.astro'
 
 const { blog } = Astro.props
@@ -41,7 +41,8 @@ interface Props {
         <p
             class="mt-5 inline-flex items-center gap-x-1 font-medium text-orange-400 decoration-2 group-hover:underline dark:text-orange-300"
         >
-            Read more <Icon name="arrowRightStatic" />
+            Read more &rarr;
+            <!-- <Icon name="arrowRightStatic" /> -->
         </p>
     </div>
 </a>
