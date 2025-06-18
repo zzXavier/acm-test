@@ -26,4 +26,9 @@ collections:
     slug: '{{slug}}'
     fields: # The fields for each document, usually in frontmatter
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Banner", name: "banner", widget: "image" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["life"] }
       - { label: "Body", name: "body", widget: "markdown" }
