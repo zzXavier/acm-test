@@ -19,7 +19,6 @@ import url from 'node:url'
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 
 const alias = {
-    '@main': path.resolve(__dirname, './src/main'),
     '@src': path.resolve(__dirname, './src'),
     "@components": path.resolve(__dirname, './src/components'),
     '@content': path.resolve(__dirname, './src/content'),
