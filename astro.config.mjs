@@ -173,7 +173,12 @@ export default defineConfig({
   },
 
   integrations: [
-      decapCmsOauth(),
+      decapCmsOauth({
+        adminRoute: "/admin",
+        oauthDisabled: false,
+        oauthLoginRoute: "/api/auth",
+        oauthCallbackRoute: "/api/callback",
+      }),
       partytown(),
       sitemap(),
       
